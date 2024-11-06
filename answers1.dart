@@ -1,5 +1,5 @@
-//define variables
 void main() {
+  // Define variables
   int myInt = 42;
   print('Integer: $myInt');
 
@@ -15,9 +15,7 @@ void main() {
   List<int> myList = [1, 2, 3, 4, 5];
   print('List: $myList');
 
-//type conversion
-
-  // Test the conversion functions
+  // Type conversion
   String numberStr = "123";
   int convertedInt = stringToInt(numberStr);
   double convertedDouble = stringToDouble(numberStr);
@@ -28,30 +26,25 @@ void main() {
   double intToDbl = intToDouble(myInt);
   print('Int $myInt to String: $intToStr');
   print('Int $myInt to double: $intToDbl');
+
+  // Control flow checks
+  checkNumber(-5); // Example: Check if number is positive, negative, or zero
+  checkVotingEligibility(20); // Example: Check voting eligibility
+  printDayOfWeek(3); // Example: Print day of the week
+
+  // Loops
+  printNumbersFrom1To10(); // For loop that prints numbers from 1 to 10
+  printNumbersFrom10To1(); // While loop that prints numbers from 10 to 1
+  printNumbersFrom1To5(); // Do-while loop that prints numbers from 1 to 5
 }
 
-// Function to convert a String to int
-int stringToInt(String str) {
-  return int.parse(str);
-}
+// Functions for type conversion
+int stringToInt(String str) => int.parse(str);
+double stringToDouble(String str) => double.parse(str);
+String intToString(int number) => number.toString();
+double intToDouble(int number) => number.toDouble();
 
-// Function to convert a String to double
-double stringToDouble(String str) {
-  return double.parse(str);
-}
-
-// Function to convert an int to String
-String intToString(int number) {
-  return number.toString();
-}
-
-// Function to convert an int to double
-double intToDouble(int number) {
-  return number.toDouble();
-}
-
-// control flows
-// Function to check if a number is positive, negative, or zero
+// Functions for control flows
 void checkNumber(int number) {
   if (number > 0) {
     print('$number is positive.');
@@ -62,7 +55,6 @@ void checkNumber(int number) {
   }
 }
 
-// Function to check voting eligibility
 void checkVotingEligibility(int age) {
   if (age >= 18) {
     print('Eligible to vote.');
@@ -71,7 +63,6 @@ void checkVotingEligibility(int age) {
   }
 }
 
-// Function to print the day of the week based on an integer input
 void printDayOfWeek(int day) {
   switch (day) {
     case 1:
@@ -100,7 +91,7 @@ void printDayOfWeek(int day) {
   }
 }
 
-// Function for the for loop that prints numbers from 1 to 10
+// Loop functions
 void printNumbersFrom1To10() {
   print('For loop: Numbers from 1 to 10');
   for (int i = 1; i <= 10; i++) {
@@ -108,7 +99,6 @@ void printNumbersFrom1To10() {
   }
 }
 
-// Function for the while loop that prints numbers from 10 to 1
 void printNumbersFrom10To1() {
   print('While loop: Numbers from 10 to 1');
   int j = 10;
@@ -118,7 +108,6 @@ void printNumbersFrom10To1() {
   }
 }
 
-// Function for the do-while loop that prints numbers from 1 to 5
 void printNumbersFrom1To5() {
   print('Do-while loop: Numbers from 1 to 5');
   int k = 1;
